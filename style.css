@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: black;
+  height: 10vh;
+  padding: 0 10px;
+}
+.ham {
+  cursor: pointer;
+  z-index: 3;
+  position: absolute;
+  top: 4vh;
+  left: 100px;
+  width: 30px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ham div {
+  cursor: pointer;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform-origin: 10px;
+  transition: all 0.5s ease;
+}
+.down {
+  transform: rotate(45deg);
+}
+.up {
+  transform: rotate(-45deg);
+}
+
+.links {
+  transform: translateY(-100%);
+  background: black;
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  top: 10vh;
+  color: white;
+  transition: all 0.5s ease;
+}
+.display-links {
+  transform: translateY(0%);
+}
+.links ul {
+  width: 80%;
+  margin: auto;
+  list-style: none;
+}
+.links ul li {
+  opacity: 0;
+  transform: translateY(20px);
+  width: 100%;
+  padding: 15px 10px;
+  border-bottom: 2px solid grey;
+  cursor: pointer;
+}
+.logo {
+  z-index: 3;
+  position: absolute;
+  top: 2vh;
+  right: 100px;
+  color: aliceblue;
+  font-size: 2rem;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+.pages {
+  color: rgb(19, 19, 19);
+  padding-top: 10vh;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Mac {
+  background: rgb(250, 250, 250);
+  flex-direction: row-reverse;
+}
+.para {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+h1 {
+  padding-bottom: 50px;
+}
+p {
+  line-height: 25px;
+  font-size: 1rem;
+}
+img {
+  width: 40%;
+}
+.i-phone {
+  flex-direction: row-reverse;
+  background: rgb(250, 250, 250);
+}
+@media screen and (max-width: 768px) {
+  img {
+    width: 50%;
+  }
+  .para {
+    width: 90%;
+    line-height: normal;
+    padding: 80px 0;
+  }
+  .pages {
+    margin: 100px 0;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.appear1 {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
